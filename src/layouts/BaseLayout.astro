@@ -1,0 +1,26 @@
+---
+import Navigation from '../components/Navigation.astro';
+// Props allow us to pass data into this layout
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Personal portfolio showcasing projects and experience" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+  </body>
+</html>

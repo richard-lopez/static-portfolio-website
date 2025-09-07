@@ -1,16 +1,213 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Your Name - Portfolio" description="Project Manager & Tech Professional building thoughtful solutions">
+  <main class="homepage">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Hello, I'm <span class="highlight">Richard</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          Project Manager & Tech Professional
+        </h2>
+        <p class="hero-description">
+          I build thoughtful solutions through strategic planning and execution, 
+          bridging the gap between technical complexity and business objectives.
+        </p>
+        <div class="hero-actions">
+          <a href="/projects" class="btn-primary">View My Work</a>
+          <a href="/contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="intro-content">
+        <h3>What I Do</h3>
+        <div class="intro-grid">
+          <div class="intro-card">
+            <h4>Project Management</h4>
+            <p>Leading cross-functional teams to deliver complex technical projects on time and within scope.</p>
+          </div>
+          <div class="intro-card">
+            <h4>Strategic Planning</h4>
+            <p>Developing comprehensive roadmaps that align technical capabilities with business goals.</p>
+          </div>
+          <div class="intro-card">
+            <h4>Process Optimization</h4>
+            <p>Implementing efficient workflows and methodologies to improve team productivity and quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .homepage {
+    min-height: 100vh;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    line-height: 1.2;
+  }
+
+  .highlight {
+    color: #3498db;
+    font-weight: 500;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+  }
+
+  .btn-primary:hover {
+    background: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+  }
+
+  .btn-secondary:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .intro {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .intro h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .intro-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .intro-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .intro-card h4 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .intro-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+      width: 200px;
+      text-align: center;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
