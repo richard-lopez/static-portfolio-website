@@ -12,5 +12,15 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "terminal.integrated.commandsToSkipShell": ["claude.analyze"],
+  "keybindings": [
+    {
+      "key": "cmd+shift+c",
+      "command": "workbench.action.terminal.sendSequence",
+      "args": {
+        "text": "claude -p 'Analyze this file: ${file}'\n"
+      }
+    }
+  ]
 }

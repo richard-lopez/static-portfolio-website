@@ -1,0 +1,13 @@
+{
+  "projectDescription": "Minimalist portfolio website built with Astro",
+  "techStack": ["Astro", "HTML", "CSS", "JavaScript"],
+  "filePatterns": {
+    "include": ["src/**/*.astro", "src/**/*.css", "src/**/*.js"],
+    "exclude": ["node_modules/**", "dist/**", ".git/**"]
+  },
+  "preferences": {
+    "codeStyle": "modern",
+    "verbosity": "detailed",
+    "explanations": true
+  }
+}
