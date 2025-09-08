@@ -2,42 +2,67 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Your Name - Portfolio" description="Project Manager & Tech Professional building thoughtful solutions">
+<BaseLayout title="Your Name - Portfolio" description="Project Manager & Creative Professional">
   <main class="homepage">
-    <section class="hero">
+    <!-- Hero Section with Bold Color -->
+    <section class="hero section-full">
       <div class="hero-content">
-        <h1 class="hero-title">
-          Hello, I'm <span class="highlight">Richard</span>
-        </h1>
-        <h2 class="hero-subtitle">
-          Project Manager & Tech Professional
-        </h2>
-        <p class="hero-description">
-          I build thoughtful solutions through strategic planning and execution, 
-          bridging the gap between technical complexity and business objectives.
-        </p>
-        <div class="hero-actions">
-          <a href="/projects" class="btn-primary">View My Work</a>
-          <a href="/contact" class="btn-secondary">Get In Touch</a>
+        <div class="hero-text">
+          <h1>RICHARD LOPEZ</h1>
+          <div class="hero-subtitle">
+            <p>Project Manager &<br/>Creative Professional</p>
+          </div>
+        </div>
+        
+        <div class="hero-navigation">
+          <div class="nav-item">
+            <span class="project-number">01.</span>
+            <a href="/projects">Projects</a>
+          </div>
+          <div class="nav-item">
+            <span class="project-number">02.</span>
+            <a href="/experience">Experience</a>
+          </div>
+          <div class="nav-item">
+            <span class="project-number">03.</span>
+            <a href="/contact">Contact</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="intro">
-      <div class="intro-content">
-        <h3>What I Do</h3>
-        <div class="intro-grid">
-          <div class="intro-card">
-            <h4>Project Management</h4>
-            <p>Leading cross-functional teams to deliver complex technical projects on time and within scope.</p>
+    <!-- About Section -->
+    <section class="about">
+      <div class="container-narrow">
+        <div class="about-content">
+          <div class="about-text">
+            <h3>About</h3>
+            <p>
+              I build thoughtful solutions through strategic planning and execution, 
+              bridging the gap between technical complexity and business objectives. 
+              My work focuses on creating systems that scale, processes that endure, 
+              and experiences that matter.
+            </p>
+            <p>
+              Currently leading digital transformation initiatives at forward-thinking 
+              organizations, with expertise in agile methodologies, stakeholder management, 
+              and cross-functional team leadership.
+            </p>
           </div>
-          <div class="intro-card">
-            <h4>Strategic Planning</h4>
-            <p>Developing comprehensive roadmaps that align technical capabilities with business goals.</p>
-          </div>
-          <div class="intro-card">
-            <h4>Process Optimization</h4>
-            <p>Implementing efficient workflows and methodologies to improve team productivity and quality.</p>
+          
+          <div class="about-details">
+            <div class="detail-item">
+              <h4>Email</h4>
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+            <div class="detail-item">
+              <h4>Currently</h4>
+              <p>Available for new opportunities</p>
+            </div>
+            <div class="detail-item">
+              <h4>Location</h4>
+              <p>Your City, Country</p>
+            </div>
           </div>
         </div>
       </div>
@@ -47,167 +72,119 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
   .homepage {
-    min-height: 100vh;
+    padding-top: 0rem; /* Account for fixed nav */
   }
 
+  /* Hero Section - Bold color background */
   .hero {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 4rem 0;
-    text-align: center;
+    background: var(--orange-primary);
+    color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
   .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-    line-height: 1.2;
-  }
-
-  .highlight {
-    color: #3498db;
-    font-weight: 500;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #555;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary, .btn-secondary {
-    padding: 0.75rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
-
-  .btn-primary {
-    background: #3498db;
-    color: white;
-    border: 2px solid #3498db;
-  }
-
-  .btn-primary:hover {
-    background: #2980b9;
-    border-color: #2980b9;
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: #3498db;
-    border: 2px solid #3498db;
-  }
-
-  .btn-secondary:hover {
-    background: #3498db;
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  .intro {
-    padding: 4rem 0;
-    background: white;
-  }
-
-  .intro-content {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-  }
-
-  .intro h3 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: #2c3e50;
-    margin-bottom: 3rem;
-  }
-
-  .intro-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    align-items: center;
   }
 
-  .intro-card {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
+  .hero-text h1 {
+    font-size: clamp(4rem, 12vw, 12rem);
+    line-height: 0.85;
+    margin-bottom: 2rem;
+    font-weight: 400;
   }
 
-  .intro-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .intro-card h4 {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .intro-card p {
-    color: #666;
-    line-height: 1.6;
+  .hero-subtitle p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.3;
     margin: 0;
   }
 
-  /* Mobile responsiveness */
+  .hero-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .nav-item a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* About Section */
+  .about {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text h3 {
+    margin-bottom: 2rem;
+  }
+
+  .about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .detail-item h4 {
+    margin-bottom: 0.5rem;
+    color: var(--gray-medium);
+  }
+
+  .detail-item p,
+  .detail-item a {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  /* Mobile Responsiveness */
   @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-    }
-
-    .hero-description {
-      font-size: 1.1rem;
-    }
-
-    .hero-actions {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .btn-primary, .btn-secondary {
-      width: 200px;
-      text-align: center;
-    }
-
-    .intro-grid {
+    .hero-content {
       grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: left;
+    }
+
+    .hero-navigation {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .homepage {
+      padding-top: 4rem;
     }
   }
 </style>

@@ -1,3 +1,6 @@
+/* Import fonts - we'll use a mix of serif and sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
 /* Reset and base styles */
 * {
   box-sizing: border-box;
@@ -6,98 +9,157 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.4;
+  color: #000;
   background-color: #fff;
   font-size: 16px;
+  letter-spacing: -0.01em;
 }
 
-/* Typography System */
+/* Bold Color System - Inspired by your examples */
+:root {
+  --yellow-primary: #ffd700;
+  --orange-primary: #ff6b35;
+  --red-primary: #ff3333;
+  --black: #000000;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-medium: #999999;
+}
+
+/* Typography System - Editorial Style */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
-  line-height: 1.2;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  line-height: 1.1;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: inherit;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Inter', sans-serif;
 }
 
 p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #555;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: inherit;
 }
 
-/* Links */
-a {
-  color: #3498db;
-  transition: color 0.3s ease;
+/* Project numbering system - like your examples */
+.project-number {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-a:hover {
-  color: #2980b9;
+/* Editorial layout utilities */
+.section-full {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
-/* Layout utilities */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Color Variables (for future use) */
-:root {
-  --primary-color: #3498db;
-  --primary-dark: #2980b9;
-  --secondary-color: #2c3e50;
-  --text-color: #333;
-  --text-light: #555;
-  --text-lighter: #666;
-  --background: #fff;
-  --background-light: #f8f9fa;
-  --border-color: #e5e5e5;
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Links - Minimal style */
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Button system - Bold and minimal */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: currentColor;
+  color: var(--white);
+  opacity: 1;
+}
+
+.btn-filled {
+  background: currentColor;
+  color: var(--white);
+}
+
+.btn-filled:hover {
+  background: transparent;
+  color: inherit;
 }
 
 /* Responsive typography */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
+  .container,
+  .container-narrow {
+    padding: 0 1rem;
   }
 
   p {
-    font-size: 1rem;
-  }
-
-  .container {
-    padding: 0 1rem;
+    font-size: 0.95rem;
   }
 }
