@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact - Your Name" description="Connect for strategic project collaborations and opportunities">
+  <main class="contact-page">
+    <!-- Header Section -->
+    <section class="contact-header section-full">
+      <div class="container">
+        <div class="header-content">
+          <h1>Contact</h1>
+          <p>Ready to discuss strategic initiatives and collaborative opportunities</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <h4>Email</h4>
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+              </div>
+
+              <div class="contact-item">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a>
+              </div>
+
+              <div class="contact-item">
+                <h4>Location</h4>
+                <p>Your City, Country</p>
+              </div>
+
+              <div class="contact-item">
+                <h4>Currently</h4>
+                <p>Available for new opportunities and strategic consulting engagements</p>
+              </div>
+            </div>
+
+            <div class="availability-note">
+              <h4>Collaboration Focus</h4>
+              <p>
+                Seeking opportunities in digital transformation, agile implementation, 
+                and strategic project leadership. Open to both full-time positions 
+                and consulting partnerships.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <h3>Send Message</h3>
+            
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Organization</label>
+                <input type="text" id="company" name="company">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or collaboration opportunity..."></textarea>
+              </div>
+
+              <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+            
+            <p class="form-note">
+              This form is ready for integration with services like Netlify Forms, 
+              Formspree, or similar contact form handlers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    padding-top: 5rem; /* Account for fixed nav */
+  }
+
+  /* Header Section */
+  .contact-header {
+    background: var(--black);
+    color: var(--white);
+    padding: 4rem 0;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .header-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* Contact Content */
+  .contact-content {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-info h3,
+  .contact-form-section h3 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+
+  .contact-details {
+    margin-bottom: 4rem;
+  }
+
+  .contact-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-medium);
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-item a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  .contact-item a:hover {
+    opacity: 0.7;
+  }
+
+  .contact-item p {
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .availability-note {
+    padding: 2rem;
+    background: var(--gray-light);
+    border-left: 3px solid var(--black);
+  }
+
+  .availability-note h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .availability-note p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--black);
+  }
+
+  /* Contact Form */
+  .contact-form {
+    margin-bottom: 2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background: var(--white);
+    transition: border-color 0.2s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--black);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    background: var(--black);
+    color: var(--white);
+    border: 2px solid var(--black);
+  }
+
+  .submit-btn:hover {
+    background: transparent;
+    color: var(--black);
+  }
+
+  .form-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .contact-info h3,
+    .contact-form-section h3 {
+      font-size: 1.8rem;
+    }
+
+    .availability-note {
+      padding: 1.5rem;
+    }
+  }
+</style>

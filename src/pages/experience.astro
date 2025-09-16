@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Experience - Your Name" description="Professional journey in project management and strategic leadership">
+  <main class="experience-page">
+    <!-- Header Section -->
+    <section class="experience-header section-full">
+      <div class="container">
+        <div class="header-content">
+          <h1>Experience</h1>
+          <p>Strategic leadership in project management and digital transformation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-timeline">
+      <div class="container-narrow">
+        <!-- Current Role -->
+        <article class="experience-entry">
+          <div class="experience-period">
+            <span class="period-years">2022 — Present</span>
+            <span class="period-duration">2 years</span>
+          </div>
+          <div class="experience-content">
+            <h3>Senior Project Manager</h3>
+            <h4>Tech Innovation Corp</h4>
+            
+            <div class="experience-description">
+              <p>
+                Leading strategic initiatives for digital transformation projects across 
+                multiple business units. Manage cross-functional teams of 15+ members 
+                and coordinate with stakeholders across engineering, design, and business operations.
+              </p>
+            </div>
+
+            <div class="experience-details">
+              <div class="achievements">
+                <h5>Key Achievements</h5>
+                <ul>
+                  <li>Delivered 12 major projects on time and under budget</li>
+                  <li>Implemented agile methodologies, improving team velocity by 35%</li>
+                  <li>Reduced project delivery time by 25% through process optimization</li>
+                  <li>Led digital transformation initiative with $2M budget</li>
+                </ul>
+              </div>
+              
+              <div class="expertise">
+                <h5>Core Expertise</h5>
+                <p>Agile/Scrum • Stakeholder Management • Budget Planning • Risk Assessment • Cross-functional Leadership</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Previous Role -->
+        <article class="experience-entry">
+          <div class="experience-period">
+            <span class="period-years">2020 — 2022</span>
+            <span class="period-duration">2 years</span>
+          </div>
+          <div class="experience-content">
+            <h3>Project Coordinator</h3>
+            <h4>Digital Solutions Ltd</h4>
+            
+            <div class="experience-description">
+              <p>
+                Coordinated technical projects and facilitated communication between 
+                development teams and business stakeholders. Specialized in API 
+                integrations, system migrations, and process standardization.
+              </p>
+            </div>
+
+            <div class="experience-details">
+              <div class="achievements">
+                <h5>Key Achievements</h5>
+                <ul>
+                  <li>Successfully managed 8 API integration projects</li>
+                  <li>Developed standardized project documentation templates</li>
+                  <li>Trained 5 junior team members in project management methodologies</li>
+                  <li>Reduced project setup time by 40% through process improvements</li>
+                </ul>
+              </div>
+              
+              <div class="expertise">
+                <h5>Core Expertise</h5>
+                <p>API Management • Technical Documentation • Team Training • Process Development • Quality Assurance</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Early Role -->
+        <article class="experience-entry">
+          <div class="experience-period">
+            <span class="period-years">2018 — 2020</span>
+            <span class="period-duration">2 years</span>
+          </div>
+          <div class="experience-content">
+            <h3>Business Analyst</h3>
+            <h4>StartUp Innovations</h4>
+            
+            <div class="experience-description">
+              <p>
+                Analyzed business processes and technical requirements for early-stage 
+                startup environment. Worked closely with development teams to translate 
+                business needs into technical specifications and actionable project plans.
+              </p>
+            </div>
+
+            <div class="experience-details">
+              <div class="achievements">
+                <h5>Key Achievements</h5>
+                <ul>
+                  <li>Documented and optimized 15+ core business processes</li>
+                  <li>Facilitated requirements gathering for 6 major product features</li>
+                  <li>Improved cross-team communication efficiency by 40%</li>
+                  <li>Established data analysis frameworks for decision making</li>
+                </ul>
+              </div>
+              
+              <div class="expertise">
+                <h5>Core Expertise</h5>
+                <p>Requirements Analysis • Process Mapping • Stakeholder Communication • Data Analysis • Documentation</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .experience-page {
+    padding-top: 5rem; /* Account for fixed nav */
+  }
+
+  /* Header Section */
+  .experience-header {
+    background: var(--red-primary);
+    color: var(--white);
+    padding: 4rem 0;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .header-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+  }
+
+  /* Experience Timeline */
+  .experience-timeline {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .experience-entry {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .experience-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .experience-period {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .period-years {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .period-duration {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+  }
+
+  .experience-content h3 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  .experience-content h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gray-medium);
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .experience-description {
+    margin-bottom: 3rem;
+  }
+
+  .experience-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .experience-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .experience-details h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-medium);
+    margin-bottom: 1rem;
+  }
+
+  .achievements ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .achievements li {
+    margin-bottom: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .achievements li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gray-medium);
+  }
+
+  .expertise p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gray-medium);
+    line-height: 1.6;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .experience-entry {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .experience-period {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .experience-content h3 {
+      font-size: 1.8rem;
+    }
+
+    .experience-description p {
+      max-width: 100%;
+    }
+
+    .experience-details {
+      gap: 2rem;
+    }
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 
 export interface Props {
@@ -22,5 +23,6 @@ const { title, description = "Portfolio showcasing strategic project management 
   <body>
     <Navigation />
     <slot />
+    <Footer />
   </body>
 </html>
