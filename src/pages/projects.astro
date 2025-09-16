@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Projects - Your Name" description="A showcase of strategic project management and creative solutions">
+  <main class="projects-page">
+    <!-- Header Section with Bold Background -->
+    <section class="projects-header section-full">
+      <div class="container">
+        <div class="header-content">
+          <h1>Projects</h1>
+          <p>Selected works in project management and strategic execution</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Index -->
+    <section class="projects-index">
+      <div class="container">
+        <div class="projects-list">
+          <!-- Project 001 -->
+          <article class="project-entry">
+            <div class="project-number">
+              <span class="project-number">001.</span>
+            </div>
+            <div class="project-content">
+              <h3>Digital Transformation Initiative</h3>
+              <div class="project-meta">
+                <span class="project-type">Project Management</span>
+                <span class="project-year">2022-2023</span>
+              </div>
+              <p class="project-description">
+                Led a cross-functional team of 12 to modernize legacy systems, 
+                resulting in 40% improved efficiency and $200K annual savings. 
+                Implemented agile methodologies and stakeholder alignment processes.
+              </p>
+              <div class="project-details">
+                <div class="project-impact">
+                  <h4>Impact</h4>
+                  <ul>
+                    <li>40% efficiency improvement</li>
+                    <li>$200K annual cost savings</li>
+                    <li>12-member cross-functional team</li>
+                  </ul>
+                </div>
+                <div class="project-approach">
+                  <h4>Approach</h4>
+                  <p>Agile • Stakeholder Management • Process Optimization</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 002 -->
+          <article class="project-entry">
+            <div class="project-number">
+              <span class="project-number">002.</span>
+            </div>
+            <div class="project-content">
+              <h3>API Integration Platform</h3>
+              <div class="project-meta">
+                <span class="project-type">Technical Coordination</span>
+                <span class="project-year">2022</span>
+              </div>
+              <p class="project-description">
+                Coordinated the integration of multiple third-party APIs, 
+                streamlining data flow and reducing manual processes by 60%. 
+                Managed technical documentation and quality assurance protocols.
+              </p>
+              <div class="project-details">
+                <div class="project-impact">
+                  <h4>Impact</h4>
+                  <ul>
+                    <li>60% reduction in manual processes</li>
+                    <li>8 API integrations delivered</li>
+                    <li>Standardized documentation protocols</li>
+                  </ul>
+                </div>
+                <div class="project-approach">
+                  <h4>Approach</h4>
+                  <p>API Management • Technical Documentation • QA Protocols</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 003 -->
+          <article class="project-entry">
+            <div class="project-number">
+              <span class="project-number">003.</span>
+            </div>
+            <div class="project-content">
+              <h3>Team Productivity Analytics</h3>
+              <div class="project-meta">
+                <span class="project-type">Analytics & Strategy</span>
+                <span class="project-year">2021-2022</span>
+              </div>
+              <p class="project-description">
+                Designed and implemented a comprehensive dashboard for tracking 
+                team performance metrics and project milestones. Created data-driven 
+                insights for strategic decision making.
+              </p>
+              <div class="project-details">
+                <div class="project-impact">
+                  <h4>Impact</h4>
+                  <ul>
+                    <li>Real-time performance tracking</li>
+                    <li>25% improvement in milestone delivery</li>
+                    <li>Data-driven strategic insights</li>
+                  </ul>
+                </div>
+                <div class="project-approach">
+                  <h4>Approach</h4>
+                  <p>Data Analysis • Dashboard Design • Performance Metrics</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .projects-page {
+    padding-top: 5rem; /* Account for fixed nav */
+  }
+
+  /* Header Section */
+  .projects-header {
+    background: var(--orange-primary);
+    color: var(--black);
+    padding: 4rem 0;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .header-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Projects Index */
+  .projects-index {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .projects-list {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .project-entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 3rem;
+    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .project-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .project-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-medium);
+  }
+
+  .project-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .project-type {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  .project-year {
+    color: var(--gray-medium);
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 80%;
+  }
+
+  .project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .project-details h4 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+  }
+
+  .project-impact ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-impact li {
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+  }
+
+  .project-approach p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gray-medium);
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .project-entry {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .project-content h3 {
+      font-size: 2rem;
+    }
+
+    .project-description {
+      max-width: 100%;
+    }
+
+    .project-details {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .project-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
