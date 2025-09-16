@@ -1,0 +1,162 @@
+---
+// Minimal editorial footer
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="footer-info">
+          <h4>UNTITLED (PROFILE)</h4>
+          <p>Strategic project management and creative leadership</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="/">Index</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/experience">Experience</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="mailto:your.email@example.com">Email</a></li>
+              <li><a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-credits">
+        <p>&copy; 2024 Your Name</p>
+        <p>Built with Astro</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--gray-light);
+    color: var(--black);
+    margin-top: 4rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem;
+  }
+
+  .footer-content {
+    margin-bottom: 3rem;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .footer-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: var(--black);
+  }
+
+  .footer-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray-medium);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-section h5 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section a {
+    font-size: 0.95rem;
+    color: var(--black);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer-section a:hover {
+    opacity: 0.7;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+  }
+
+  .footer-credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-credits p {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    margin: 0;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 3rem 1rem 2rem;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .footer-links {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-credits {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>
